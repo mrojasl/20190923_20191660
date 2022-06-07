@@ -1,28 +1,25 @@
 package com.example.lab7iweb.servlet;
 //probando
 
+import com.example.lab7iweb.bean.Bean;
+import com.example.lab7iweb.dao.Dao;
+
 import java.io.*;
+import java.util.ArrayList;
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 
-@WebServlet(name = "helloServlet", value = "/hello-servlet")
+@WebServlet(name = "inicioServlet", urlPatterns = {"/inicio",""})
 public class HelloServlet extends HttpServlet {
-    private String message;
+    public void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
 
-    public void init() {
-        message = "Hello World!";
-    }
+        ArrayList<Bean> lista = Dao.listarLab7();
+        request.setAttribute("lista",lista);
+        RequestDispatcher rd =request.getRequestDispatcher("index.jsp");
+        rd.forward(request,response);
 
-    public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        response.setContentType("text/html");
-
-        // Hello
-        PrintWriter out = response.getWriter();
-        out.println("<html><body>");
-        out.println("<h1>" + message + "</h1>");
-        out.println("</body></html>");
-    }
-
-    public void destroy() {
     }
 }

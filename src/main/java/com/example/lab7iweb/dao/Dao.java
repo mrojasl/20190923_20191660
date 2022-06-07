@@ -5,7 +5,7 @@ import java.sql.*;
 import java.util.ArrayList;
 
 public class Dao {
-    public ArrayList<Bean> listarLab7(){
+    public static ArrayList<Bean> listarLab7(){
         ArrayList<Bean> lista = new ArrayList<>();
 
         String user = "root";
