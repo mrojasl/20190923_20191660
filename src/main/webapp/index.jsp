@@ -1,6 +1,6 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ page import="com.example.lab7iweb.bean.Bean"%>
-<<jsp:useBean type="java.util.ArrayList<com.example.lab7iweb.bean.Bean>" scope="request" id="lista"/>
+<jsp:useBean type="java.util.ArrayList<com.example.lab7iweb.bean.Bean>" scope="request" id="lista"/>
 
 <!DOCTYPE html>
 <html>
@@ -14,19 +14,21 @@
         <table class="table table-striped table-bordered">
             <thead>
                 <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">First</th>
-                    <th scope="col">Last</th>
-                    <th scope="col">Handle</th>
+                    <th scope="col">Id</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">N Categorias</th>
+                    <th scope="col">N Peliculas</th>
                 </tr>
             </thead>
             <tbody>
+                <%for (Bean a : lista) {%>
                 <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
+                    <th scope="row"><%=a.getId()%></th>
+                    <td><%=a.getNombre()%></td>
+                    <td><%=a.getN_categoria()%></td>
+                    <td><%=a.getN_pelicula()%></td>
                 </tr>
+                <%}%>
             </tbody>
         </table>
     </body>
