@@ -21,8 +21,8 @@ public class Dao {
 
         String sql = "select a.actor_id,concat(upper(a.first_name),\" \",upper(a.last_name)),count(fc.category_id),count(f.film_id)\n" +
                 "from actor a inner join film_actor fa on (a.actor_id=fa.actor_id) inner join film f on (fa.film_id=f.film_id)\n" +
-                "inner join film_category fc on (f.film_id=fc.film_id) where (upper(a.first_name) like '%LO%'\n" +
-                "or upper(a.last_name) like '%LO%')\n" +
+                "inner join film_category fc on (f.film_id=fc.film_id) where (upper(a.first_name) like \"%LO%\"\n" +
+                "or upper(a.last_name) like \"%LO%\")\n" +
                 "and f.language_id=1\n" +
                 "group by a.actor_id having count(*)>20\n" +
                 "order by a.actor_id;\n";
