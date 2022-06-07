@@ -6,20 +6,24 @@ import com.example.lab7iweb.dao.Dao;
 
 import java.io.*;
 import java.util.ArrayList;
-import javax.servlet.RequestDispatcher;
-import javax.servlet.ServletException;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 
-@WebServlet(name = "inicioServlet", urlPatterns = {"/inicio",""})
+@WebServlet(name = "helloServlet", value = "/hello-servlet")
 public class HelloServlet extends HttpServlet {
-    public void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+    private String message;
 
-        ArrayList<Bean> lista = Dao.listarLab7();
+    public void init() {
+        message = "Hello World!";
+    }
+    public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        response.setContentType("text/html");
+
+        ArrayList<Bean> lista= Dao.listarLab7();
         request.setAttribute("lista",lista);
-        RequestDispatcher rd =request.getRequestDispatcher("index.jsp");
-        rd.forward(request,response);
 
+    }
+
+    public void destroy() {
     }
 }
