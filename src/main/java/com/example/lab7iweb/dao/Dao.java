@@ -9,7 +9,7 @@ public class Dao {
 
         String user = "root";
         String pass = "root";
-        String url = "jdbc:mysql://localhost:3306/hr";
+        String url = "jdbc:mysql://localhost:3306/sakila";
 
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
