@@ -1,4 +1,4 @@
-package com.example.lab7iweb;
+package com.example.lab7iweb.servlet;
 
 import java.io.*;
 import javax.servlet.http.*;

@@ -1,2 +1,4 @@
-package com.example.lab7iweb.dao;public class Dao {
+package com.example.lab7iweb.dao;
+
+public class Dao {
 }
