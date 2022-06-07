@@ -1,11 +1,12 @@
 package com.example.lab7iweb.dao;
-package com.example.lab7iweb.bean;
+import com.example.lab7iweb.bean.Bean;
+
 import java.sql.*;
 import java.util.ArrayList;
 
 public class Dao {
-    public ArrayList<Bean> listarTrabajos(){
-        ArrayList<Bean> listaTrabajos = new ArrayList<>();
+    public ArrayList<Bean> listarLab7(){
+        ArrayList<Bean> lista = new ArrayList<>();
 
         String user = "root";
         String pass = "root";
@@ -20,27 +21,28 @@ public class Dao {
 
         String sql = "select a.actor_id,concat(upper(a.first_name),\" \",upper(a.last_name)),count(fc.category_id),count(f.film_id)\n" +
                 "from actor a inner join film_actor fa on (a.actor_id=fa.actor_id) inner join film f on (fa.film_id=f.film_id)\n" +
-                "inner join film_category fc on (f.film_id=fc.film_id) where (upper(a.first_name) like \"%LO%\"\n" +
-                "or upper(a.last_name) like \"%LO%\")\n" +
+                "inner join film_category fc on (f.film_id=fc.film_id) where (upper(a.first_name) like '%LO%'\n" +
+                "or upper(a.last_name) like '%LO%')\n" +
                 "and f.language_id=1\n" +
                 "group by a.actor_id having count(*)>20\n" +
-                "order by a.actor_id;\n"
+                "order by a.actor_id;\n";
         try (Connection connection = DriverManager.getConnection(url, user, pass);
              Statement stmt = connection.createStatement();
-             ResultSet rs = stmt.executeQuery(sql) {
+             ResultSet rs = stmt.executeQuery(sql) ){
 
             while(rs.next()){
-                BJob bJob = new BJob();
-                bJob.setJobId(rs.getString(1));
-                bJob.setJobTitle(rs.getString(2));
-                bJob.setMinSalary(rs.getInt(3));
-                bJob.setMaxSalary(rs.getInt(4));
-                listaTrabajos.add(bJob);
+                Bean b = new Bean();
+                b.setId(rs.getInt(1));
+                b.setNombre(rs.getString(2));
+                b.setN_categoria(rs.getInt(3));
+                b.setN_pelicula(rs.getInt(4));
+
+                lista.add(b);
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
 
-        return listaTrabajos;
+        return listarLab7();
     }
 }
