@@ -1,4 +1,7 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ page import="com.example.lab7iweb.bean.Bean"%>
+<<jsp:useBean type="java.util.ArrayList<com.example.lab7iweb.bean.Bean>" scope="request" id="lista"/>
+
 <!DOCTYPE html>
 <html>
     <head>
