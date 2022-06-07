@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c827a190-0172-423f-a91e-ce4c5616331c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/lab7iweb_war.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/lab7iweb_war_exploded.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="c827a190-0172-423f-a91e-ce4c5616331c" name="Changes" comment="probando">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab7iweb/bean/Bean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab7iweb/bean/Bean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab7iweb/dao/Dao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab7iweb/dao/Dao.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +16,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2AE1ji3LUkRgziXogwi3jcV2klA" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -36,6 +37,11 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
   }
 }]]></component>
   <component name="RunManager">
@@ -70,7 +76,16 @@
       <option name="presentableId" value="Default" />
       <updated>1654560069554</updated>
       <workItem from="1654560070792" duration="368000" />
+      <workItem from="1654561651290" duration="1062000" />
     </task>
+    <task id="LOCAL-00001" summary="probando">
+      <created>1654561700103</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1654561700103</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -86,5 +101,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="probando" />
+    <option name="LAST_COMMIT_MESSAGE" value="probando" />
   </component>
 </project>
